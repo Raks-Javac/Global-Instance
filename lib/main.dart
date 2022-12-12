@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'src/domain/usecase/instances.dart';
 import 'src/model/example_object.dart';
+import 'src/views/next_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -60,6 +61,8 @@ class _MyHomePageState extends State<MyHomePage> {
 //change  your usecase instance to your custom object
       Usecase.exampleData = customExample;
     });
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => const NextPage()));
   }
 
   @override
